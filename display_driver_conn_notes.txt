@@ -1,0 +1,28 @@
+Display and driver connection/config notes
+
+Can use the Adafruit schematic for reference
+https://cdn-learn.adafruit.com/assets/assets/000/015/463/original/adafruit_products_schem.png?1395173896
+
+Use the lib https://github.com/adafruit/TFTLCD-Library
+
+
+Resolution 
+240x320
+
+1.65 - 3.3V IO voltage (suggest using 3V3)
+Use 3V3 for VDDI and VCI (ag)
+
+LCD voltage drive
+VCOM needs 4.5 - 5.5 V?
+VCL needs -2.0V - -3.0V (suggest 2.5V)
+
+Backlight? 
+
+Resistive touch - Don't even wire this up
+
+Different interface options 
+- I suggest using 8bit parallel option with low colour resolution option
+
+- Set IDLE mode ON, to allow for sleep(which we won't actually use) BUT this gives us reduced colour mode (8colour)
+
+ 
