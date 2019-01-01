@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name my_symbols)(type Legacy)(uri C:/Users/Francis/Documents/repos/binulator/PCB_rev0/binulator_kicad_project/my_symbols.lib)(options "")(descr ""))
+)
