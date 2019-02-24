@@ -299,16 +299,16 @@ Battery - 18650 cell - https://www.jaycar.com.au/18650-2600mah-li-ion-protected-
 $Comp
 L my_symbols:BQ24230 U?
 U 1 1 5C713283
-P 3100 5650
-F 0 "U?" H 3175 6428 50  0000 C CNN
-F 1 "BQ24230" H 3175 6337 50  0000 C CNN
-F 2 "my_footprints:BQ24230" H 2950 5700 50  0001 C CNN
-F 3 "" H 2950 5700 50  0001 C CNN
-F 4 "mouser" H 3100 5650 50  0001 C CNN "Supplier 1"
-F 5 "595-BQ24230RGTR" H 3100 5650 50  0001 C CNN "Supplier 1 Order Code"
-F 6 "digikey" H 3100 5650 50  0001 C CNN "Supplier 2"
-F 7 "296-23937-1-ND" H 3100 5650 50  0001 C CNN "Supplier 2 Order Code"
-	1    3100 5650
+P 4100 6100
+F 0 "U?" H 4600 5900 50  0000 C CNN
+F 1 "BQ24230" H 3600 6550 50  0000 C CNN
+F 2 "my_footprints:BQ24230" H 3950 6150 50  0001 C CNN
+F 3 "" H 3950 6150 50  0001 C CNN
+F 4 "mouser" H 4100 6100 50  0001 C CNN "Supplier 1"
+F 5 "595-BQ24230RGTR" H 4100 6100 50  0001 C CNN "Supplier 1 Order Code"
+F 6 "digikey" H 4100 6100 50  0001 C CNN "Supplier 2"
+F 7 "296-23937-1-ND" H 4100 6100 50  0001 C CNN "Supplier 2 Order Code"
+	1    4100 6100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -371,34 +371,6 @@ Wire Wire Line
 Connection ~ 2450 2700
 Wire Wire Line
 	2450 2700 2500 2700
-Text Label 3450 2000 2    50   ~ 0
-VBUS
-$Comp
-L Device:C C?
-U 1 1 5C71C3B3
-P 3450 2200
-F 0 "C?" H 3565 2246 50  0000 L CNN
-F 1 "10nF" H 3565 2155 50  0000 L CNN
-F 2 "" H 3488 2050 50  0001 C CNN
-F 3 "~" H 3450 2200 50  0001 C CNN
-	1    3450 2200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5C71C47E
-P 3450 2400
-F 0 "#PWR?" H 3450 2150 50  0001 C CNN
-F 1 "GND" H 3455 2227 50  0000 C CNN
-F 2 "" H 3450 2400 50  0001 C CNN
-F 3 "" H 3450 2400 50  0001 C CNN
-	1    3450 2400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3450 2400 3450 2350
-Wire Wire Line
-	3450 2050 3450 2000
 $Comp
 L power:GND #PWR?
 U 1 1 5C71D9F9
@@ -503,4 +475,348 @@ Wire Wire Line
 	5200 3200 5300 3200
 Wire Wire Line
 	5200 3100 5850 3100
+Text GLabel 9750 5300 2    50   Input ~ 0
+3V3
+Wire Wire Line
+	9750 5300 9750 5400
+Connection ~ 9750 5400
+Text GLabel 1550 4300 0    50   Input ~ 0
+VBUS_SENSE
+$Comp
+L Device:R 47k+
+U 1 1 5C7252ED
+P 1900 4100
+F 0 "47k+" H 1970 4146 50  0000 L CNN
+F 1 "R" H 1970 4055 50  0000 L CNN
+F 2 "" V 1830 4100 50  0001 C CNN
+F 3 "~" H 1900 4100 50  0001 C CNN
+	1    1900 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R 47k+
+U 1 1 5C7253C9
+P 1900 4500
+F 0 "47k+" H 1970 4546 50  0000 L CNN
+F 1 "R" H 1970 4455 50  0000 L CNN
+F 2 "" V 1830 4500 50  0001 C CNN
+F 3 "~" H 1900 4500 50  0001 C CNN
+	1    1900 4500
+	1    0    0    -1  
+$EndComp
+Text Label 1900 3900 0    50   ~ 0
+VBUS
+Wire Wire Line
+	1900 3900 1900 3950
+Wire Wire Line
+	1900 4250 1900 4300
+$Comp
+L power:GND #PWR?
+U 1 1 5C727E9C
+P 1900 4700
+F 0 "#PWR?" H 1900 4450 50  0001 C CNN
+F 1 "GND" H 1905 4527 50  0000 C CNN
+F 2 "" H 1900 4700 50  0001 C CNN
+F 3 "" H 1900 4700 50  0001 C CNN
+	1    1900 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 4650 1900 4700
+Connection ~ 1900 4300
+Wire Wire Line
+	1900 4300 1900 4350
+Wire Wire Line
+	1550 4300 1900 4300
+$Comp
+L Device:LED D?
+U 1 1 5C72F21A
+P 4200 5050
+F 0 "D?" V 4238 4933 50  0000 R CNN
+F 1 "GRN LED - LTST-C281KGKT " V 4147 4933 50  0000 R CNN
+F 2 "" H 4200 5050 50  0001 C CNN
+F 3 "http://datasheet.octopart.com/LTST-C281KGKT-Lite-On-datasheet-13703979.pdf" H 4200 5050 50  0001 C CNN
+F 4 "mouser" H 4200 5050 50  0001 C CNN "Supplier 1"
+F 5 "859-LTST-C281KGKT" H 4200 5050 50  0001 C CNN "Supplier 1 Order Code"
+F 6 "Arrow Electronics" H 4200 5050 50  0001 C CNN "Supplier 2"
+F 7 "LTST-C281KGKT" H 4200 5050 50  0001 C CNN "Supplier 2 Order Code"
+	1    4200 5050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R 1k5
+U 1 1 5C733DAA
+P 4500 4750
+F 0 "1k5" V 4293 4750 50  0000 C CNN
+F 1 "R" V 4384 4750 50  0000 C CNN
+F 2 "" V 4430 4750 50  0001 C CNN
+F 3 "~" H 4500 4750 50  0001 C CNN
+	1    4500 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R 1k?
+U 1 1 5C7359AF
+P 4300 4600
+F 0 "1k?" V 4093 4600 50  0000 C CNN
+F 1 "1k5" V 4184 4600 50  0000 C CNN
+F 2 "" V 4230 4600 50  0001 C CNN
+F 3 "~" H 4300 4600 50  0001 C CNN
+	1    4300 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5C735B11
+P 4100 5300
+F 0 "D?" V 4138 5183 50  0000 R CNN
+F 1 "GRN LED - LTST-C281KGKT " V 4047 5183 50  0000 R CNN
+F 2 "" H 4100 5300 50  0001 C CNN
+F 3 "http://datasheet.octopart.com/LTST-C281KGKT-Lite-On-datasheet-13703979.pdf" H 4100 5300 50  0001 C CNN
+F 4 "mouser" H 4100 5300 50  0001 C CNN "Supplier 1"
+F 5 "859-LTST-C281KGKT" H 4100 5300 50  0001 C CNN "Supplier 1 Order Code"
+F 6 "Arrow Electronics" H 4100 5300 50  0001 C CNN "Supplier 2"
+F 7 "LTST-C281KGKT" H 4100 5300 50  0001 C CNN "Supplier 2 Order Code"
+	1    4100 5300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4100 5450 4100 5500
+Wire Wire Line
+	4100 5150 4100 4600
+Wire Wire Line
+	4100 4600 4150 4600
+Wire Wire Line
+	4600 5700 4700 5700
+Wire Wire Line
+	4650 4750 4700 4750
+Wire Wire Line
+	4700 4750 4700 5700
+Connection ~ 4700 5700
+Wire Wire Line
+	4450 4600 4700 4600
+Wire Wire Line
+	4700 4600 4700 4750
+Connection ~ 4700 4750
+Wire Wire Line
+	4200 5500 4200 5200
+Wire Wire Line
+	4200 4900 4200 4750
+Wire Wire Line
+	4200 4750 4350 4750
+Wire Wire Line
+	4600 5800 4700 5800
+Wire Wire Line
+	4700 5800 4700 5700
+$Comp
+L power:GND #PWR?
+U 1 1 5C748334
+P 5350 6050
+F 0 "#PWR?" H 5350 5800 50  0001 C CNN
+F 1 "GND" H 5355 5877 50  0000 C CNN
+F 2 "" H 5350 6050 50  0001 C CNN
+F 3 "" H 5350 6050 50  0001 C CNN
+	1    5350 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5C74837E
+P 5350 5850
+F 0 "C?" H 5465 5896 50  0000 L CNN
+F 1 "4.7uF" H 5465 5805 50  0000 L CNN
+F 2 "" H 5388 5700 50  0001 C CNN
+F 3 "~" H 5350 5850 50  0001 C CNN
+	1    5350 5850
+	1    0    0    -1  
+$EndComp
+Connection ~ 5350 5700
+Wire Wire Line
+	5350 5700 5650 5700
+Wire Wire Line
+	5350 6000 5350 6050
+$Comp
+L Device:R R?
+U 1 1 5C74A778
+P 4750 6350
+F 0 "R?" H 4820 6396 50  0000 L CNN
+F 1 "10k" H 4820 6305 50  0000 L CNN
+F 2 "" V 4680 6350 50  0001 C CNN
+F 3 "~" H 4750 6350 50  0001 C CNN
+	1    4750 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C74A86C
+P 4750 6550
+F 0 "#PWR?" H 4750 6300 50  0001 C CNN
+F 1 "GND" H 4755 6377 50  0000 C CNN
+F 2 "" H 4750 6550 50  0001 C CNN
+F 3 "" H 4750 6550 50  0001 C CNN
+	1    4750 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C74A8A3
+P 3150 6550
+F 0 "#PWR?" H 3150 6300 50  0001 C CNN
+F 1 "GND" H 3155 6377 50  0000 C CNN
+F 2 "" H 3150 6550 50  0001 C CNN
+F 3 "" H 3150 6550 50  0001 C CNN
+	1    3150 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 6500 3150 6450
+Wire Wire Line
+	3150 6100 3750 6100
+Wire Wire Line
+	4600 6200 4750 6200
+Wire Wire Line
+	4750 6500 4750 6550
+$Comp
+L power:+BATT #PWR?
+U 1 1 5C751A4D
+P 4750 6100
+F 0 "#PWR?" H 4750 5950 50  0001 C CNN
+F 1 "+BATT" H 4765 6273 50  0000 C CNN
+F 2 "" H 4750 6100 50  0001 C CNN
+F 3 "" H 4750 6100 50  0001 C CNN
+	1    4750 6100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4600 6100 4700 6100
+$Comp
+L power:+BATT #PWR?
+U 1 1 5C756846
+P 5950 5850
+F 0 "#PWR?" H 5950 5700 50  0001 C CNN
+F 1 "+BATT" H 5965 6023 50  0000 C CNN
+F 2 "" H 5950 5850 50  0001 C CNN
+F 3 "" H 5950 5850 50  0001 C CNN
+	1    5950 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5C75DF04
+P 5950 6100
+F 0 "C?" H 6065 6146 50  0000 L CNN
+F 1 "4.7uF" H 6065 6055 50  0000 L CNN
+F 2 "" H 5988 5950 50  0001 C CNN
+F 3 "~" H 5950 6100 50  0001 C CNN
+	1    5950 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 5850 5950 5950
+$Comp
+L power:GND #PWR?
+U 1 1 5C760737
+P 5950 6300
+F 0 "#PWR?" H 5950 6050 50  0001 C CNN
+F 1 "GND" H 5955 6127 50  0000 C CNN
+F 2 "" H 5950 6300 50  0001 C CNN
+F 3 "" H 5950 6300 50  0001 C CNN
+	1    5950 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 6250 5950 6300
+Wire Wire Line
+	4600 6000 4700 6000
+Wire Wire Line
+	4700 6000 4700 6100
+Connection ~ 4700 6100
+Wire Wire Line
+	4700 6100 4750 6100
+Wire Wire Line
+	4700 5700 5350 5700
+Text Notes 4850 6550 0    50   ~ 0
+Not using an NTC
+Wire Wire Line
+	5650 5700 5650 4800
+Wire Wire Line
+	5650 4800 7600 4800
+Connection ~ 7600 4800
+Wire Wire Line
+	3750 5800 3150 5800
+Wire Wire Line
+	3150 5800 3150 6100
+$Comp
+L Device:R R?
+U 1 1 5C770EA3
+P 2850 6050
+F 0 "R?" H 2920 6096 50  0000 L CNN
+F 1 "3k60" H 2920 6005 50  0000 L CNN
+F 2 "" V 2780 6050 50  0001 C CNN
+F 3 "~" H 2850 6050 50  0001 C CNN
+	1    2850 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 5900 2850 5900
+Wire Wire Line
+	2850 6450 3150 6450
+Connection ~ 3150 6450
+Text Label 3300 6000 0    50   ~ 0
+VBUS
+Wire Wire Line
+	2850 6200 2850 6450
+Wire Wire Line
+	3150 6100 3150 6450
+Connection ~ 3150 6100
+Wire Wire Line
+	3300 6000 3750 6000
+$Comp
+L Device:C C?
+U 1 1 5C78416E
+P 3300 6300
+F 0 "C?" H 3415 6346 50  0000 L CNN
+F 1 "1uF" H 3415 6255 50  0000 L CNN
+F 2 "" H 3338 6150 50  0001 C CNN
+F 3 "~" H 3300 6300 50  0001 C CNN
+	1    3300 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 6000 3300 6150
+Wire Wire Line
+	3300 6450 3150 6450
+Wire Wire Line
+	3750 6200 3750 6450
+Wire Wire Line
+	3750 6450 3300 6450
+Connection ~ 3300 6450
+$Comp
+L Device:R R?
+U 1 1 5C795117
+P 4300 6750
+F 0 "R?" H 4370 6796 50  0000 L CNN
+F 1 "1k8" H 4370 6705 50  0000 L CNN
+F 2 "" V 4230 6750 50  0001 C CNN
+F 3 "~" H 4300 6750 50  0001 C CNN
+	1    4300 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C79511E
+P 4300 6950
+F 0 "#PWR?" H 4300 6700 50  0001 C CNN
+F 1 "GND" H 4305 6777 50  0000 C CNN
+F 2 "" H 4300 6950 50  0001 C CNN
+F 3 "" H 4300 6950 50  0001 C CNN
+	1    4300 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 6900 4300 6950
+Text Notes 4400 6950 0    50   ~ 0
+Fast charge rate of (500mA ish)
+Wire Wire Line
+	4300 6500 4300 6600
 $EndSCHEMATC
